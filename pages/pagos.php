@@ -1,33 +1,6 @@
 <?php $page_title='Pagos'; require __DIR__ . '/../includes/header.php'; ?>
 <?php /* PHP-ready */ ?>
-<!-- Barra superior -->
-  <div class="bg-brand-900 text-white text-sm">
-    <div class="max-w-7xl mx-auto px-3 py-2 flex items-center justify-between">
-      <p>Atendemos AMBA · Lun–Vie 9–18 h</p>
-      <a href="https://wa.me/5491123941812" class="underline hover:no-underline">WhatsApp: +54 9 11 2394‑1812</a>
-    </div>
-  </div>
 
-  <!-- Header sticky -->
-  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-slate-200">
-    <div class="max-w-7xl mx-auto px-3 py-3 flex items-center gap-4">
-      <a href="index.php#inicio" class="flex items-center gap-3 mr-auto">
-        <img src="/images/logo.webp" alt="Del Sur Construcciones" class="h-14 w-auto logo-slide" />
-        <span class="sr-only">Del Sur Construcciones</span>
-      </a>
-      <nav class="hidden md:flex gap-6 text-slate-700 nav-drop">
-        <a class="hover:text-brand-700 focus-ring" href="index.php#servicios">Servicios</a>
-        <a class="hover:text-brand-700 focus-ring" href="index.php#proyectos">Proyectos</a>
-        <a class="hover:text-brand-700 focus-ring" href="index.php#proceso">Proceso</a>
-        <a class="hover:text-brand-700 focus-ring" href="index.php#faq">Preguntas</a>
-        <a class="hover:text-brand-700 focus-ring" href="/planner/planificador.php">Planificador</a>
-        <!-- enlace activo para pagos -->
-        <a class="text-brand-700 font-semibold focus-ring" href="/pages/pagos.php">Pagos</a>
-        <a class="hover:text-brand-700 focus-ring" href="index.php#contacto">Contacto</a>
-      </nav>
-      <a href="index.php#contacto" class="ml-4 inline-flex items-center rounded-xl bg-brand-700 px-4 py-2 text-white hover:bg-brand-600 focus-ring btn-anim nav-drop">Solicitar presupuesto</a>
-    </div>
-  </header>
 
   <!-- Hero / Introducción -->
   <section class="py-16 bg-slate-50">
@@ -62,34 +35,4 @@
   </section>
 
   <!-- Footer reutilizado -->
-  <footer class="bg-slate-950 text-slate-400 text-sm">
-    <div class="max-w-7xl mx-auto px-3 py-10 grid md:grid-cols-3 gap-8">
-      <div>
-        <img src="/images/logo.webp" alt="Del Sur Construcciones" class="h-12 w-auto mb-3" />
-        <p>© <?php echo date("Y"); ?> Del Sur Construcciones. Todos los derechos reservados.</p>
-      </div>
-      <div>
-        <h3 class="font-semibold text-white mb-2">Secciones</h3>
-        <ul class="space-y-1">
-          <li><a href="index.php#servicios" class="hover:text-white">Servicios</a></li>
-          <li><a href="index.php#proyectos" class="hover:text-white">Proyectos</a></li>
-          <li><a href="index.php#proceso" class="hover:text-white">Proceso</a></li>
-          <li><a href="index.php#faq" class="hover:text-white">Preguntas</a></li>
-          <li><a href="/planner/planificador.php" class="hover:text-white">Planificador</a></li>
-          <li><a href="/pages/pagos.php" class="hover:text-white">Pagos</a></li>
-          <li><a href="index.php#contacto" class="hover:text-white">Contacto</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="font-semibold text-white mb-2">Contacto</h3>
-        <p>WhatsApp: +54 9 11 2394‑1812</p>
-        <p>Email: lauti.seid@gmail.com</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- JavaScript: actualizar año -->
-  
-
-    <script src="/js/scripts.js"></script>
-<?php require __DIR__ . '/../includes/footer.php'; ?>
+  <!-- JavaScript: actualizar año --><?php require __DIR__ . '/../includes/footer.php'; ?>

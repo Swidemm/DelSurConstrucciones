@@ -1,19 +1,8 @@
 <?php $page_title='Inicio'; require __DIR__ . '/includes/header.php'; ?>
 <?php /* PHP-ready */ ?>
-<!-- Barra superior -->
-  <div class="bg-brand-900 text-white text-sm">
-    <div class="max-w-7xl mx-auto px-3 py-2 flex items-center justify-between">
-      <p>Atendemos AMBA · Lun–Vie 9–18 h</p>
-      <a href="https://wa.me/5491123941812" class="underline hover:no-underline">WhatsApp: +54 9 11 2394-1812</a>
-    </div>
-  </div>
-
-  
-
-  <!-- Hero -->
-  <section id="inicio" class="relative isolate">
+<section id="inicio" class="relative isolate">
     <video autoplay muted loop playsinline class="absolute inset-0 -z-10 h-full w-full object-cover">
-      <source src="./videos/hero.mp4" type="video/mp4" />
+      <source src="/videos/hero.mp4" type="video/mp4" />
     </video>
     <!-- Blueprint overlay with subtle architectural lines -->
     <div class="absolute inset-0 arch-overlay"></div>
@@ -180,35 +169,4 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bg-slate-950 text-slate-400 text-sm">
-    <div class="max-w-7xl mx-auto px-3 py-10 grid md:grid-cols-3 gap-8">
-      <div>
-        <img src="/images/logo.webp" alt="Del Sur Construcciones" class="h-12 w-auto mb-3" />
-        <p>© <?php echo date("Y"); ?> Del Sur Construcciones. Todos los derechos reservados.</p>
-      </div>
-      <div>
-        <h3 class="font-semibold text-white mb-2">Secciones</h3>
-        <ul class="space-y-1">
-          <li><a href="#servicios" class="hover:text-white">Servicios</a></li>
-          <li><a href="#proyectos" class="hover:text-white">Proyectos</a></li>
-          <li><a href="#proceso" class="hover:text-white">Proceso</a></li>
-          <li><a href="#faq" class="hover:text-white">Preguntas</a></li>
-          <!-- Enlace a la nueva página del planificador en el pie -->
-          <li><a href="/planner/planificador.php" class="hover:text-white">Planificador</a></li>
-          <li><a href="/pages/pagos.php" class="hover:text-white">Pagos</a></li>
-          <li><a href="#contacto" class="hover:text-white">Contacto</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="font-semibold text-white mb-2">Contacto</h3>
-        <p>WhatsApp: +54 9 11 2394-1812</p>
-        <p>Email: lauti.seid@gmail.com</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- JavaScript -->
-  
-
-    <script src="/js/scripts.js"></script>
-<?php require __DIR__ . '/includes/footer.php'; ?>
+  <!-- JavaScript --><?php require __DIR__ . '/includes/footer.php'; ?>

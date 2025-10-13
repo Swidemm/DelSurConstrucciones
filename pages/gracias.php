@@ -8,8 +8,4 @@
     <h1>¡Gracias! 👷‍♂️</h1>
     <p>Si tu pago fue aprobado, en unos segundos te llevamos a WhatsApp para coordinar tu obra.</p>
     <p><a id="wa" href="#">Ir a WhatsApp ahora</a></p>
-  </div>
-  
-
-    <script src="/js/scripts.js"></script>
-<?php require __DIR__ . '/../includes/footer.php'; ?>
+  </div><?php require __DIR__ . '/../includes/footer.php'; ?>
