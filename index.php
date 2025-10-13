@@ -1,44 +1,6 @@
+<?php $page_title='Inicio'; require __DIR__ . '/includes/header.php'; ?>
 <?php /* PHP-ready */ ?>
-<!doctype html>
-<html lang="es-AR">
-<head>
-    <link rel="stylesheet" href="/css/styles.css">
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Del Sur Construcciones — Obras llave en mano, refacciones y diseño</title>
-  <meta name="description" content="Del Sur Construcciones: viviendas, locales y obras comerciales en el AMBA. Proyectos, dirección y ejecución. Pedí tu presupuesto sin cargo." />
-  <meta name="theme-color" content="#0f4c5c" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Del Sur Construcciones" />
-  <meta property="og:description" content="Obras llave en mano, refacciones y diseño. Pedí tu presupuesto sin cargo." />
-  <meta property="og:image" content="./imagenes/og-cover.webp" />
-  <meta property="og:url" content="https://delsurconstrucciones.example/" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Del Sur Construcciones" />
-  <meta name="twitter:description" content="Obras llave en mano, refacciones y diseño." />
-  <meta name="twitter:image" content="./imagenes/og-cover.webp" />
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-
-  <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  
-
-  <link rel="icon" href="./favicon/favicon.ico" />
-  <link rel="manifest" href="./favicon/site.webmanifest" />
-  <!-- External stylesheet for custom styles -->
-  <link rel="stylesheet" href="./css/styles.css" />
-
-</head>
-<body class="font-sans text-slate-800">
-  <!-- Barra superior -->
+<!-- Barra superior -->
   <div class="bg-brand-900 text-white text-sm">
     <div class="max-w-7xl mx-auto px-3 py-2 flex items-center justify-between">
       <p>Atendemos AMBA · Lun–Vie 9–18 h</p>
@@ -268,5 +230,4 @@
   
 
     <script src="/js/scripts.js"></script>
-</body>
-</html>
+<?php require __DIR__ . '/includes/footer.php'; ?>

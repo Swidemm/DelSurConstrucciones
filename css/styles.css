@@ -128,3 +128,6 @@ button:hover { opacity: .9; }
 .inl-7-dac4fe {
   text-align:center;
 }
+
+/* nav active */
+.nav a.active{font-weight:700;border-bottom:2px solid currentColor}

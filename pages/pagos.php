@@ -1,43 +1,6 @@
+<?php $page_title='Pagos'; require __DIR__ . '/../includes/header.php'; ?>
 <?php /* PHP-ready */ ?>
-<!doctype html>
-<html lang="es-AR">
-<head>
-    <link rel="stylesheet" href="/css/styles.css">
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Medios de pago — Del Sur Construcciones</title>
-  <meta name="description" content="Conocé nuestras opciones de pago: transferencia bancaria, tarjetas de crédito y débito, Mercado Pago, y más para tu proyecto de construcción." />
-  <meta name="theme-color" content="#0f4c5c" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Medios de pago — Del Sur Construcciones" />
-  <meta property="og:description" content="Elegí el medio de pago que mejor se adapte a tus necesidades: transferencia, tarjetas, Mercado Pago y más." />
-  <meta property="og:image" content="./imagenes/og-cover.webp" />
-  <meta property="og:url" content="https://delsurconstrucciones.example/pagos.php" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Medios de pago — Del Sur Construcciones" />
-  <meta name="twitter:description" content="Descubrí todas nuestras formas de pago para tu obra llave en mano o reforma." />
-  <meta name="twitter:image" content="./imagenes/og-cover.webp" />
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-
-  <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  
-
-  <link rel="icon" href="./favicon/favicon.ico" />
-  <link rel="manifest" href="./favicon/site.webmanifest" />
-  <!-- External stylesheet for custom styles -->
-  <link rel="stylesheet" href="./css/styles.css" />
-</head>
-<body class="font-sans text-slate-800">
-  <!-- Barra superior -->
+<!-- Barra superior -->
   <div class="bg-brand-900 text-white text-sm">
     <div class="max-w-7xl mx-auto px-3 py-2 flex items-center justify-between">
       <p>Atendemos AMBA · Lun–Vie 9–18 h</p>
@@ -129,5 +92,4 @@
   
 
     <script src="/js/scripts.js"></script>
-</body>
-</html>
+<?php require __DIR__ . '/../includes/footer.php'; ?>
