@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>¡Gracias!</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
 <body class="inl-6-97950b">
   <div class="inl-7-dac4fe">
     <h1>¡Gracias! 👷‍♂️</h1>
@@ -13,6 +13,6 @@
   </div>
   
 
-    <script src="js/scripts.js"></script>
+    <script src="/js/scripts.js"></script>
 </body>
 </html>

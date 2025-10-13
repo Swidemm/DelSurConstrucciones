@@ -64,8 +64,8 @@
         <a class="hover:text-brand-700 focus-ring" href="index.php#proceso">Proceso</a>
         <a class="hover:text-brand-700 focus-ring" href="index.php#faq">Preguntas</a>
         <!-- enlace activo para planificador -->
-        <a class="text-brand-700 font-semibold focus-ring" href="planificador.php">Planificador</a>
-        <a class="hover:text-brand-700 focus-ring" href="pagos.php">Pagos</a>
+        <a class="text-brand-700 font-semibold focus-ring" href="/planner/planificador.php">Planificador</a>
+        <a class="hover:text-brand-700 focus-ring" href="/pages/pagos.php">Pagos</a>
         <a class="hover:text-brand-700 focus-ring" href="index.php#contacto">Contacto</a>
       </nav>
       <a href="index.php#contacto" class="ml-4 inline-flex items-center rounded-xl bg-brand-700 px-4 py-2 text-white hover:bg-brand-600 focus-ring btn-anim nav-drop">Solicitar presupuesto</a>
@@ -101,8 +101,8 @@
           <li><a href="index.php#proyectos" class="hover:text-white">Proyectos</a></li>
           <li><a href="index.php#proceso" class="hover:text-white">Proceso</a></li>
           <li><a href="index.php#faq" class="hover:text-white">Preguntas</a></li>
-          <li><a href="planificador.php" class="hover:text-white">Planificador</a></li>
-          <li><a href="pagos.php" class="hover:text-white">Pagos</a></li>
+          <li><a href="/planner/planificador.php" class="hover:text-white">Planificador</a></li>
+          <li><a href="/pages/pagos.php" class="hover:text-white">Pagos</a></li>
           <li><a href="index.php#contacto" class="hover:text-white">Contacto</a></li>
         </ul>
       </div>
