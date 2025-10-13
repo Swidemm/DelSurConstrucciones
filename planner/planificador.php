@@ -1,49 +1,6 @@
+<?php $page_title='Planner'; require __DIR__ . '/../includes/header.php'; ?>
 <?php /* PHP-ready */ ?>
-<!doctype html>
-<html lang="es-AR">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Planificador de Espacios — Del Sur Construcciones</title>
-  <meta name="description" content="Diseña y visualiza tus espacios en 2D y 3D con nuestro planificador." />
-  <meta name="theme-color" content="#0f4c5c" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Planificador de Espacios — Del Sur Construcciones" />
-  <meta property="og:description" content="Construí y visualizá tus planos en 3D con nuestro planificador integral." />
-  <meta property="og:image" content="./imagenes/og-cover.webp" />
-  <meta property="og:url" content="https://delsurconstrucciones.example/planificador.php" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Planificador de Espacios — Del Sur Construcciones" />
-  <meta name="twitter:description" content="Construí y visualizá tus planos en 3D con nuestro planificador integral." />
-  <meta name="twitter:image" content="./imagenes/og-cover.webp" />
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-
-  <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config = { theme: { extend: {
-    colors: {
-      brand: {
-        50:'#e6f0f2',100:'#cfe2e6',200:'#9fc4cd',300:'#6ea6b3',400:'#3e889a',500:'#0f6a81',600:'#0d5a6d',700:'#0b4a59',800:'#083945',900:'#062f3a'
-      }
-    },
-    fontFamily:{ sans:['Inter', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'] }
-  }}};</script>
-
-  <link rel="icon" href="./favicon/favicon.ico" />
-  <link rel="manifest" href="./favicon/site.webmanifest" />
-  <!-- External stylesheet for custom styles -->
-  <link rel="stylesheet" href="./css/styles.css" />
-</head>
-<body class="font-sans text-slate-800">
-  <!-- Barra superior -->
+<!-- Barra superior -->
   <div class="bg-brand-900 text-white text-sm">
     <div class="max-w-7xl mx-auto px-3 py-2 flex items-center justify-between">
       <p>Atendemos AMBA · Lun–Vie 9–18 h</p>
@@ -118,5 +75,4 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
-</body>
-</html>
+<?php require __DIR__ . '/../includes/footer.php'; ?>

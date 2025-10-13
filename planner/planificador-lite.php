@@ -1,14 +1,5 @@
+<?php $page_title='Planner Lite'; require __DIR__ . '/../includes/header.php'; ?>
 <?php /* PHP-ready */ ?>
-<!doctype html>
-<html lang="es">
-<head>
-  <link rel="stylesheet" href="/css/styles.css">
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Planificador Espacial — Lite (v9.6)</title>
-
-</head>
-<body>
 <div class="app">
   <header>
     <div class="title">Planificador Espacial <span class="badge">Lite • 2D</span></div>
@@ -738,5 +729,4 @@ window.addEventListener('keydown', (e)=>{
 });
 
 </script>
-</body>
-</html>
+<?php require __DIR__ . '/../includes/footer.php'; ?>
