@@ -8,26 +8,7 @@
     </div>
   </div>
 
-  <!-- Header sticky -->
-  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-slate-200">
-    <div class="max-w-7xl mx-auto px-3 py-3 flex items-center gap-4">
-      <a href="#inicio" class="flex items-center gap-3 mr-auto">
-        <img src="./imagenes/logo.webp" alt="Del Sur Construcciones" class="h-14 w-auto logo-slide" />
-        <span class="sr-only">Del Sur Construcciones</span>
-      </a>
-      <nav class="hidden md:flex gap-6 text-slate-700 nav-drop">
-        <a class="hover:text-brand-700 focus-ring" href="#servicios">Servicios</a>
-        <a class="hover:text-brand-700 focus-ring" href="#proyectos">Proyectos</a>
-        <a class="hover:text-brand-700 focus-ring" href="#proceso">Proceso</a>
-        <a class="hover:text-brand-700 focus-ring" href="#faq">Preguntas</a>
-        <!-- Enlaces a secciones adicionales -->
-        <a class="hover:text-brand-700 focus-ring" href="/planner/planificador.php">Planificador</a>
-        <a class="hover:text-brand-700 focus-ring" href="/pages/pagos.php">Pagos</a>
-        <a class="hover:text-brand-700 focus-ring" href="#contacto">Contacto</a>
-      </nav>
-      <a href="#contacto" class="ml-4 inline-flex items-center rounded-xl bg-brand-700 px-4 py-2 text-white hover:bg-brand-600 focus-ring btn-anim nav-drop">Solicitar presupuesto</a>
-    </div>
-  </header>
+  
 
   <!-- Hero -->
   <section id="inicio" class="relative isolate">
@@ -89,21 +70,21 @@
       <p class="text-slate-600 mt-2">Algunas obras que reflejan la calidad y compromiso de nuestro equipo.</p>
       <div class="mt-8 grid md:grid-cols-3 gap-6">
         <div class="rounded-2xl overflow-hidden shadow-sm bg-white">
-          <img src="./imagenes/proyectos/proyecto-1.webp" alt="Proyecto 1" class="w-full h-48 object-cover" />
+          <img src="/images/proyectos/proyecto-1.webp" alt="Proyecto 1" class="w-full h-48 object-cover" />
           <div class="p-4">
             <h3 class="text-lg font-medium">Vivienda familiar</h3>
             <p class="text-slate-600 text-sm mt-1">Proyecto llave en mano de 200 m² con diseño contemporáneo.</p>
           </div>
         </div>
         <div class="rounded-2xl overflow-hidden shadow-sm bg-white">
-          <img src="./imagenes/proyectos/proyecto-2.webp" alt="Proyecto 2" class="w-full h-48 object-cover" />
+          <img src="/images/proyectos/proyecto-2.webp" alt="Proyecto 2" class="w-full h-48 object-cover" />
           <div class="p-4">
             <h3 class="text-lg font-medium">Oficinas corporativas</h3>
             <p class="text-slate-600 text-sm mt-1">Adecuación comercial con instalaciones de alta tecnología.</p>
           </div>
         </div>
         <div class="rounded-2xl overflow-hidden shadow-sm bg-white">
-          <img src="./imagenes/proyectos/proyecto-3.webp" alt="Proyecto 3" class="w-full h-48 object-cover" />
+          <img src="/images/proyectos/proyecto-3.webp" alt="Proyecto 3" class="w-full h-48 object-cover" />
           <div class="p-4">
             <h3 class="text-lg font-medium">Refacción integral</h3>
             <p class="text-slate-600 text-sm mt-1">Ampliación y modernización de vivienda en el barrio norte.</p>
@@ -202,7 +183,7 @@
   <footer class="bg-slate-950 text-slate-400 text-sm">
     <div class="max-w-7xl mx-auto px-3 py-10 grid md:grid-cols-3 gap-8">
       <div>
-        <img src="./imagenes/logo.webp" alt="Del Sur Construcciones" class="h-12 w-auto mb-3" />
+        <img src="/images/logo.webp" alt="Del Sur Construcciones" class="h-12 w-auto mb-3" />
         <p>© <?php echo date("Y"); ?> Del Sur Construcciones. Todos los derechos reservados.</p>
       </div>
       <div>

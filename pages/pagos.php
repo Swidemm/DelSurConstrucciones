@@ -12,7 +12,7 @@
   <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-3 py-3 flex items-center gap-4">
       <a href="index.php#inicio" class="flex items-center gap-3 mr-auto">
-        <img src="./imagenes/logo.webp" alt="Del Sur Construcciones" class="h-14 w-auto logo-slide" />
+        <img src="/images/logo.webp" alt="Del Sur Construcciones" class="h-14 w-auto logo-slide" />
         <span class="sr-only">Del Sur Construcciones</span>
       </a>
       <nav class="hidden md:flex gap-6 text-slate-700 nav-drop">
@@ -65,7 +65,7 @@
   <footer class="bg-slate-950 text-slate-400 text-sm">
     <div class="max-w-7xl mx-auto px-3 py-10 grid md:grid-cols-3 gap-8">
       <div>
-        <img src="./imagenes/logo.webp" alt="Del Sur Construcciones" class="h-12 w-auto mb-3" />
+        <img src="/images/logo.webp" alt="Del Sur Construcciones" class="h-12 w-auto mb-3" />
         <p>© <?php echo date("Y"); ?> Del Sur Construcciones. Todos los derechos reservados.</p>
       </div>
       <div>

@@ -11,7 +11,7 @@ tailwind.config = { theme: { extend: {
 
 
     // Set current year in footer
-    document.getElementById('year').textContent = new Date().getFullYear();
+    var _y=document.getElementById('year'); if(_y){_y.textContent=new Date().getFullYear();}
     // FAQ toggle: change +/− when opened
     document.querySelectorAll('#faq-list details').forEach(d => {
       d.addEventListener('toggle', () => {
@@ -78,4 +78,4 @@ tailwind.config = { theme: { extend: {
   }}};
 
 
-    document.getElementById('year').textContent = new Date().getFullYear();
+    var _y=document.getElementById('year'); if(_y){_y.textContent=new Date().getFullYear();}
