@@ -194,3 +194,36 @@ button:hover { opacity: .9; }
   :root[data-theme='light']{
     --bg:#f6f8fb; --panel:#ffffff; --ink:#0f172a; --muted:#3b4a5a; --grid:#e6eef5; --grid-strong:#cad6e2;
   }
+
+/* === Fix contraste en secciones oscuras === */
+.bg-slate-900,
+.bg-[#0b1220],
+.bg-dark,
+section.bg-slate-900 {
+  color: #f8f9fa !important; /* texto principal claro */
+}
+
+.bg-slate-900 h1,
+.bg-slate-900 h2,
+.bg-slate-900 h3,
+.bg-slate-900 h4,
+.bg-slate-900 h5,
+.bg-slate-900 h6 {
+  color: #ffffff !important;
+}
+
+.bg-slate-900 p,
+.bg-slate-900 li,
+.bg-slate-900 a {
+  color: #e3e8ef !important;
+}
+
+.bg-slate-900 a:hover {
+  color: #ffffff !important;
+}
+
+/* títulos secundarios gris claro */
+.text-slate-300,
+.text-slate-400 {
+  color: #d8dee9 !important;
+}
