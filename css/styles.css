@@ -227,3 +227,31 @@ section.bg-slate-900 {
 .text-slate-400 {
   color: #d8dee9 !important;
 }
+
+
+/* === v17: Contraste (dark + light) === */
+.bg-slate-900, .bg-[#0b1220], .bg-dark, section.bg-slate-900 { color:#f8f9fa!important; }
+.bg-slate-900 h1, .bg-slate-900 h2, .bg-slate-900 h3, .bg-slate-900 h4, .bg-slate-900 h5, .bg-slate-900 h6 { color:#fff!important; }
+.bg-slate-900 p, .bg-slate-900 li, .bg-slate-900 a { color:#e3e8ef!important; }
+.bg-slate-900 a:hover { color:#fff!important; }
+.bg-white, .bg-slate-50 { color:#0f172a!important; }
+.bg-white h1, .bg-white h2, .bg-white h3,
+.bg-slate-50 h1, .bg-slate-50 h2, .bg-slate-50 h3 { color:#0f172a!important; font-weight:700; }
+.bg-white p, .bg-white li, .bg-white a,
+.bg-slate-50 p, .bg-slate-50 li, .bg-slate-50 a { color:#334155!important; }
+.bg-white .text-slate-300, .bg-white .text-slate-400,
+.bg-slate-50 .text-slate-300, .bg-slate-50 .text-slate-400 { color:#1f2937!important; }
+.card, .service-card { color:#0f172a!important; }
+.card h3, .service-card h3 { color:#0f172a!important; font-weight:700; }
+.card p, .card li, .service-card p, .service-card li { color:#334155!important; }
+
+/* === v17: Espaciados equilibrados === */
+section { scroll-margin-top: 80px; }
+.py-24, .lg\:py-24 { padding-top: 4.5rem!important; padding-bottom: 4.5rem!important; }
+.py-20, .lg\:py-20 { padding-top: 4rem!important;  padding-bottom: 4rem!important;  }
+.py-16, .lg\:py-16 { padding-top: 3rem!important;  padding-bottom: 3rem!important;  }
+.mt-24, .lg\:mt-24 { margin-top: 4rem!important; }  .mb-24, .lg\:mb-24 { margin-bottom: 4rem!important; }
+.mt-20, .lg\:mt-20 { margin-top: 3.5rem!important; } .mb-20, .lg\:mb-20 { margin-bottom: 3.5rem!important; }
+.gap-12, .lg\:gap-12 { gap: 2rem!important; }  .gap-10, .lg\:gap-10 { gap: 1.75rem!important; }
+.grid, .container { row-gap: 2rem; }
+.card, .service-card { padding: 1.25rem!important; }
