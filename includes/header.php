@@ -39,18 +39,18 @@
   <!-- Header sticky -->
   <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-3 py-3 flex items-center gap-4">
-      <a href="#inicio" class="flex items-center gap-3 mr-auto">
+      <a href="/" class="flex items-center gap-3 mr-auto">
         <img src="/images/logo.webp" alt="Del Sur Construcciones" class="h-14 w-auto logo-slide" />
         <span class="sr-only">Del Sur Construcciones</span>
       </a>
       <nav class="hidden md:flex gap-6 text-slate-700 nav-drop">
-        <a class="hover:text-brand-700 focus-ring" href="#servicios">Servicios</a>
-        <a class="hover:text-brand-700 focus-ring" href="#proyectos">Proyectos</a>
-        <a class="hover:text-brand-700 focus-ring" href="#proceso">Proceso</a>
+        <a class="hover:text-brand-700 focus-ring" href="/#servicios">Servicios</a>
+        <a class="hover:text-brand-700 focus-ring" href="/#proyectos">Proyectos</a>
+        <a class="hover:text-brand-700 focus-ring" href="/#proceso">Proceso</a>
         <a class="hover:text-brand-700 focus-ring" href="#faq">Preguntas</a>
         <!-- Enlaces a secciones adicionales -->
         <a class="hover:text-brand-700 focus-ring" href="/planner/planificador.php">Planificador</a>
-        <a class="hover:text-brand-700 focus-ring" href="/pages/pagos.php">Pagos</a>
+        <a class="hover:text-brand-700 focus-ring" href="/pages/\1">Pagos</a>
         <a class="hover:text-brand-700 focus-ring" href="#contacto">Contacto</a>
       </nav>
       <a href="#contacto" class="ml-4 inline-flex items-center rounded-xl bg-brand-700 px-4 py-2 text-white hover:bg-brand-600 focus-ring btn-anim nav-drop">Solicitar presupuesto</a>

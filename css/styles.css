@@ -227,6 +227,10 @@ section.bg-slate-900 {
 .text-slate-400 {
   color: #d8dee9 !important;
 }
-\n\n/* === v17b: Planner embed polish === */
-.planner-embed { border:0; border-radius:12px; display:block; height:min(900px, 80vh); }
-@media (min-width: 1280px) { .planner-embed { height:900px; } }\n
+
+
+/* === v17c: planner responsive + header separator fix === */
+.planner-embed { border:0; display:block; width:100%; height:min(90vh, 980px); }
+@media (min-width: 1280px){ .planner-embed{ height:900px; } }
+.header-separator, .site-header-sep, .nav-divider { display:none !important; height:0 !important; border:0 !important; }
+section + .site-header-sep { display:none !important; }

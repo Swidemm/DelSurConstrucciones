@@ -1,82 +1,8 @@
+<?php $page_title='Inicio'; require __DIR__ . '/includes/header.php'; ?>
 <?php /* PHP-ready */ ?>
-<!doctype html>
-<html lang="es-AR">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Del Sur Construcciones — Obras llave en mano, refacciones y diseño</title>
-  <meta name="description" content="Del Sur Construcciones: viviendas, locales y obras comerciales en el AMBA. Proyectos, dirección y ejecución. Pedí tu presupuesto sin cargo." />
-  <meta name="theme-color" content="#0f4c5c" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Del Sur Construcciones" />
-  <meta property="og:description" content="Obras llave en mano, refacciones y diseño. Pedí tu presupuesto sin cargo." />
-  <meta property="og:image" content="./imagenes/og-cover.webp" />
-  <meta property="og:url" content="https://delsurconstrucciones.example/" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Del Sur Construcciones" />
-  <meta name="twitter:description" content="Obras llave en mano, refacciones y diseño." />
-  <meta name="twitter:image" content="./imagenes/og-cover.webp" />
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-
-  <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config = { theme: { extend: {
-    colors: {
-      brand: {
-        50:'#e6f0f2',100:'#cfe2e6',200:'#9fc4cd',300:'#6ea6b3',400:'#3e889a',500:'#0f6a81',600:'#0d5a6d',700:'#0b4a59',800:'#083945',900:'#062f3a'
-      }
-    },
-    fontFamily:{ sans:['Inter', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'] }
-  }}};</script>
-
-  <link rel="icon" href="./favicon/favicon.ico" />
-  <link rel="manifest" href="./favicon/site.webmanifest" />
-  <!-- External stylesheet for custom styles -->
-  <link rel="stylesheet" href="./css/styles.css" />
-
-</head>
-<body class="font-sans text-slate-800">
-  <!-- Barra superior -->
-  <div class="bg-brand-900 text-white text-sm">
-    <div class="max-w-7xl mx-auto px-3 py-2 flex items-center justify-between">
-      <p>Atendemos AMBA · Lun–Vie 9–18 h</p>
-      <a href="https://wa.me/5491123941812" class="underline hover:no-underline">WhatsApp: +54 9 11 2394-1812</a>
-    </div>
-  </div>
-
-  <!-- Header sticky -->
-  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-slate-200">
-    <div class="max-w-7xl mx-auto px-3 py-3 flex items-center gap-4">
-      <a href="#inicio" class="flex items-center gap-3 mr-auto">
-        <img src="./imagenes/logo.webp" alt="Del Sur Construcciones" class="h-14 w-auto logo-slide" />
-        <span class="sr-only">Del Sur Construcciones</span>
-      </a>
-      <nav class="hidden md:flex gap-6 text-slate-700 nav-drop">
-        <a class="hover:text-brand-700 focus-ring" href="#servicios">Servicios</a>
-        <a class="hover:text-brand-700 focus-ring" href="#proyectos">Proyectos</a>
-        <a class="hover:text-brand-700 focus-ring" href="#proceso">Proceso</a>
-        <a class="hover:text-brand-700 focus-ring" href="#faq">Preguntas</a>
-        <!-- Enlaces a secciones adicionales -->
-        <a class="hover:text-brand-700 focus-ring" href="planificador.php">Planificador</a>
-        <a class="hover:text-brand-700 focus-ring" href="pagos.php">Pagos</a>
-        <a class="hover:text-brand-700 focus-ring" href="#contacto">Contacto</a>
-      </nav>
-      <a href="#contacto" class="ml-4 inline-flex items-center rounded-xl bg-brand-700 px-4 py-2 text-white hover:bg-brand-600 focus-ring btn-anim nav-drop">Solicitar presupuesto</a>
-    </div>
-  </header>
-
-  <!-- Hero -->
-  <section id="inicio" class="relative isolate">
+<section id="inicio" class="relative isolate">
     <video autoplay muted loop playsinline class="absolute inset-0 -z-10 h-full w-full object-cover">
-      <source src="./videos/hero.mp4" type="video/mp4" />
+      <source src="/videos/hero.mp4" type="video/mp4" />
     </video>
     <!-- Blueprint overlay with subtle architectural lines -->
     <div class="absolute inset-0 arch-overlay"></div>
@@ -133,21 +59,21 @@
       <p class="text-slate-600 mt-2">Algunas obras que reflejan la calidad y compromiso de nuestro equipo.</p>
       <div class="mt-8 grid md:grid-cols-3 gap-6">
         <div class="rounded-2xl overflow-hidden shadow-sm bg-white">
-          <img src="./imagenes/proyectos/proyecto-1.webp" alt="Proyecto 1" class="w-full h-48 object-cover" />
+          <img src="/images/proyectos/proyecto-1.webp" alt="Proyecto 1" class="w-full h-48 object-cover" />
           <div class="p-4">
             <h3 class="text-lg font-medium">Vivienda familiar</h3>
             <p class="text-slate-600 text-sm mt-1">Proyecto llave en mano de 200 m² con diseño contemporáneo.</p>
           </div>
         </div>
         <div class="rounded-2xl overflow-hidden shadow-sm bg-white">
-          <img src="./imagenes/proyectos/proyecto-2.webp" alt="Proyecto 2" class="w-full h-48 object-cover" />
+          <img src="/images/proyectos/proyecto-2.webp" alt="Proyecto 2" class="w-full h-48 object-cover" />
           <div class="p-4">
             <h3 class="text-lg font-medium">Oficinas corporativas</h3>
             <p class="text-slate-600 text-sm mt-1">Adecuación comercial con instalaciones de alta tecnología.</p>
           </div>
         </div>
         <div class="rounded-2xl overflow-hidden shadow-sm bg-white">
-          <img src="./imagenes/proyectos/proyecto-3.webp" alt="Proyecto 3" class="w-full h-48 object-cover" />
+          <img src="/images/proyectos/proyecto-3.webp" alt="Proyecto 3" class="w-full h-48 object-cover" />
           <div class="p-4">
             <h3 class="text-lg font-medium">Refacción integral</h3>
             <p class="text-slate-600 text-sm mt-1">Ampliación y modernización de vivienda en el barrio norte.</p>
@@ -243,86 +169,4 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bg-slate-950 text-slate-400 text-sm">
-    <div class="max-w-7xl mx-auto px-3 py-10 grid md:grid-cols-3 gap-8">
-      <div>
-        <img src="./imagenes/logo.webp" alt="Del Sur Construcciones" class="h-12 w-auto mb-3" />
-        <p>© <?php echo date("Y"); ?> Del Sur Construcciones. Todos los derechos reservados.</p>
-      </div>
-      <div>
-        <h3 class="font-semibold text-white mb-2">Secciones</h3>
-        <ul class="space-y-1">
-          <li><a href="#servicios" class="hover:text-white">Servicios</a></li>
-          <li><a href="#proyectos" class="hover:text-white">Proyectos</a></li>
-          <li><a href="#proceso" class="hover:text-white">Proceso</a></li>
-          <li><a href="#faq" class="hover:text-white">Preguntas</a></li>
-          <!-- Enlace a la nueva página del planificador en el pie -->
-          <li><a href="planificador.php" class="hover:text-white">Planificador</a></li>
-          <li><a href="pagos.php" class="hover:text-white">Pagos</a></li>
-          <li><a href="#contacto" class="hover:text-white">Contacto</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="font-semibold text-white mb-2">Contacto</h3>
-        <p>WhatsApp: +54 9 11 2394-1812</p>
-        <p>Email: lauti.seid@gmail.com</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- JavaScript -->
-  <script>
-    // Set current year in footer
-    document.getElementById('year').textContent = new Date().getFullYear();
-    // FAQ toggle: change +/− when opened
-    document.querySelectorAll('#faq-list details').forEach(d => {
-      d.addEventListener('toggle', () => {
-        const span = d.querySelector('summary span');
-        if (span) span.textContent = d.open ? '－' : '＋';
-      });
-    });
-    // Contact form submission handler
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-      const formMessage = document.getElementById('formMessage');
-      contactForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        formMessage.textContent = '';
-        formMessage.classList.remove('text-brand-700', 'text-red-600');
-        const data = new FormData(contactForm);
-        const payload = {
-          nombre: data.get('nombre'),
-          email: data.get('email'),
-          telefono: data.get('telefono'),
-          mensaje: data.get('mensaje'),
-        };
-        try {
-          const res = await fetch('/api/contact', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(payload),
-          });
-          if (res.ok) {
-            formMessage.textContent = '¡Gracias por contactarnos! Te responderemos pronto.';
-            formMessage.classList.add('text-brand-700');
-            contactForm.reset();
-          } else {
-            throw new Error('Error al enviar');
-          }
-        } catch (err) {
-          formMessage.textContent = 'Hubo un error al enviar tu mensaje. Intenta de nuevo más tarde.';
-          formMessage.classList.add('text-red-600');
-        }
-      });
-    }
-    // Mobile menu toggle (safe check)
-    const menuBtn = document.getElementById('menuBtn');
-    const mobileNav = document.getElementById('mobileNav');
-    if (menuBtn && mobileNav) {
-      menuBtn.addEventListener('click', () => {
-        mobileNav.classList.toggle('hidden');
-      });
-    }
-  </script>
-</body>
-</html>
+  <!-- JavaScript --><?php require __DIR__ . '/includes/footer.php'; ?>

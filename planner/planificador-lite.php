@@ -1,4 +1,4 @@
-<?php /* Standalone planner UI: no incluir header/footer del sitio */ ?>
+<?php /* planner lite v9.7.1 standalone */ ?>
 <!doctype html>
 <html lang="es">
 <head>
