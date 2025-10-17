@@ -1,4 +1,3 @@
-<?php $page_title='Contacto-enviar'; require __DIR__ . '/../includes/header.php'; ?>
 <?php
 // pages/contacto-enviar.php
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') { http_response_code(405); exit('Método no permitido'); }
@@ -28,4 +27,3 @@ if (@mail($to, $subject, $body, $headers)) {
 } else {
   header('Location: /pages/contacto.php?e=2'); exit;
 }
-<?php require __DIR__ . '/../includes/footer.php'; ?>
