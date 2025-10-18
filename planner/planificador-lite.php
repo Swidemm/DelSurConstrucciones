@@ -1,4 +1,4 @@
-<?php /* standalone planner (from NODE) */ ?>
+<?php /* planner lite from NODE */ ?>
 <!doctype html>
 <html lang="es">
 <head>

@@ -101,79 +101,13 @@ details[open] > .faq-answer {
   }
 }
 
-/* === v18: static build required fixes (append-only) === */
-.site-main { padding-top: 0 !important; } /* remove header black line */
-h1, h2, h3, h4, h5, h6, .section-title, .card h3 { color:#000 !important; }
-p, li, span, a, strong, em { color:#111 !important; }
-.planner-embed { display:block; width:100%; border:0!important; outline:0!important;
-  height: clamp(760px, calc(100svh - 140px), 1200px); min-height:760px; }
-@media (max-width:640px){ .planner-embed{ height: calc(100dvh - 120px);} }
+/* === v19: minimal static tech fixes (no palette overrides) === */
+.site-main { padding-top: 0 !important; }
+.planner-embed {
+  display:block; width:100%;
+  border:0!important; outline:0!important;
+  height: clamp(760px, calc(100svh - 140px), 1200px);
+  min-height:760px;
+}
+@media (max-width:640px){ .planner-embed{ height: calc(100dvh - 120px); } }
 .planner-embed, .planner-embed * { box-shadow:none!important; }
-
-
-/* === v18a: Color boost (vivo pero profesional) ============================== */
-:root{
-  --brand-400:#1aa3b4;
-  --brand-500:#1593a3;
-  --brand-600:#0f7e8c;
-  --brand-700:#0b5d66;
-  --brand-800:#08474e;
-  --ring-brand: 0 0 0 3px rgba(26,163,180,.25);
-}
-/* CTA buttons */
-.btn-primary,
-a.btn-primary,
-button.btn-primary,
-.header-cta,
-.cta-primary{
-  background: var(--brand-700) !important;
-  border-color: var(--brand-700) !important;
-  color:#fff !important;
-}
-.btn-primary:hover,
-.header-cta:hover,
-.cta-primary:hover{
-  background: var(--brand-600) !important;
-  border-color: var(--brand-600) !important;
-}
-.btn-primary:focus-visible,
-.header-cta:focus-visible,
-.cta-primary:focus-visible{
-  outline: none !important;
-  box-shadow: var(--ring-brand) !important;
-}
-
-/* Links */
-a, .link{
-  color: var(--brand-700);
-}
-a:hover, .link:hover{
-  color: var(--brand-400);
-  text-decoration: none;
-}
-
-/* Nav hover */
-nav a:hover{
-  color: var(--brand-600) !important;
-}
-
-/* Hero overlay más claro para que se vea más vivo el fondo */
-.hero::before,
-.section-hero::before{
-  opacity:.35 !important; /* antes ~.55/.6 */
-}
-
-/* Tarjetas un toque más “nítidas” */
-.card, .feature, .panel, .box{
-  background:#fff;
-  box-shadow: 0 6px 20px rgba(2,12,27,.08);
-  border: 1px solid rgba(3,27,78,.06);
-}
-
-/* Badges/labels con marca */
-.badge, .label{
-  background: rgba(26,163,180,.12);
-  color: var(--brand-700);
-  border: 1px solid rgba(26,163,180,.22);
-}
-/* ========================================================================== */
