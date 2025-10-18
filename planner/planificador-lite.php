@@ -1,77 +1,5 @@
-<?php /* planner lite v9.7.1 standalone */ ?>
-<!doctype html>
-<html lang="es">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Planificador Espacial — Lite (v9.6)</title>
-<style>
-  :root{
-    --ui-scale:1;
-    --accent:#6ee7ff;
-    --bg:#0f172a; --panel:#1c2330; --ink:#e8ecf1; --muted:#aab4c0; --grid:#1f2b36; --grid-strong:#294256;
-    --shadow: 0 8px 24px rgba(0,0,0,.35);
-  }
-  *{box-sizing:border-box}
-  html,body{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial;color:var(--ink);background:var(--bg);font-size:calc(16px * var(--ui-scale))}
-  .app{display:grid;grid-template-rows:auto 1fr;min-height:100%}
-  header{display:flex;align-items:center;gap:.5rem;padding:.6rem .8rem;background:#121726;border-bottom:1px solid #1f2433;position:sticky;top:0;z-index:5}
-  .title{font-weight:700}.badge{font-size:.75rem;color:#7dd3fc;background:rgba(125,211,252,.12);padding:.1rem .45rem;border:1px solid rgba(125,211,252,.25);border-radius:.5rem}
-  .toolbar{display:flex;flex-wrap:wrap;gap:.6rem;margin-left:auto;align-items:center}
-  .toolgroup{display:flex;gap:.35rem;align-items:center;padding:.3rem;border:1px solid #1f2433;border-radius:.7rem;background:#0f1422}
-  .toolgroup .title{font-size:.72rem;color:#9fb2c9;margin-right:.3rem}
-  .toolbtn{appearance:none;border:1px solid #27314a;background:#151b2c;color:var(--ink);padding:.45rem .6rem;border-radius:.6rem;cursor:pointer;display:inline-flex;align-items:center;gap:.4rem;box-shadow:var(--shadow);transition:.15s;line-height:1}
-  .toolbtn:hover{transform:translateY(-1px);background:#1a2033}
-  .toolbtn[data-active="true"]{border-color:#5eead4;background:rgba(94,234,212,.1)}
-  .row{display:grid;grid-template-columns:260px 1fr 300px;gap:10px;padding:10px}
-  .panel{background:var(--panel);border:1px solid #1c2130;border-radius:16px;box-shadow:var(--shadow);min-height:200px;overflow:hidden}
-  .panel h3{margin:0;padding:.6rem .9rem;border-bottom:1px solid #1f2433;background:#121726;font-size:.95rem;color:#cdd6e3}
-  .library{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.5rem;padding:10px}
-  .lib-item{border:1px dashed #2a3146;border-radius:12px;padding:.55rem;background:#111525;display:grid;grid-template-columns:26px 1fr;align-items:center;gap:.4rem;cursor:grab}
-  .lib-item svg{width:22px;height:22px;opacity:.95}
-  .canvas-wrap{position:relative;height:clamp(420px, 70vh, 900px)}
-  #plan2d{width:100%;height:100%;display:block;background:radial-gradient(circle at 10% 0%, #131827 0%, #10131c 55%);touch-action:none}
-  .overlays{position:absolute;inset:0;pointer-events:none}
-  .hud{position:absolute;left:10px;bottom:10px;background:rgba(17,21,37,.85);border:1px solid #2b3247;border-radius:10px;padding:.5rem .6rem;font-size:.82rem;color:#cdd6e3}
-  .controls{display:flex;flex-wrap:wrap;gap:.5rem;padding:.5rem 10px;background:#101425;border-top:1px solid #1f2433}
-  .controls .group{display:flex;align-items:center;gap:.4rem;background:#0f1425;border:1px solid #1f2235;border-radius:12px;padding:.35rem .5rem}
-  input[type="number"]{background:#0e1324;border:1px solid #26304a;color:#e6edf7;border-radius:8px;padding:.35rem .5rem;min-width:70px}
-  /* Mini HUD contextual */
-  .mini-hud{position:absolute;transform-origin:top left; pointer-events:auto; z-index:6;
-    background:rgba(17,21,37,.92); border:1px solid #2b3247; border-radius:10px; box-shadow:0 10px 24px rgba(0,0,0,.35);
-    display:flex; gap:.25rem; padding:.25rem; opacity:0; transform:translateY(-4px) scale(.98); transition:.15s ease; }
-  .mini-hud.show{opacity:1; transform:translateY(0) scale(1);}
-  .mini-hud .mh-btn{appearance:none;border:1px solid #2a3146;background:#111525;color:#dbe7f5;border-radius:.5rem;
-    padding:.3rem .45rem; cursor:pointer; font-size:.9rem; display:inline-flex; align-items:center; gap:.35rem}
-  .mini-hud .mh-btn:hover{background:#172036; transform:translateY(-1px)}
-  /* Tour */
-  .tour-mask{position:fixed; inset:0; background:rgba(8,12,22,.6); backdrop-filter:saturate(120%) blur(1px);
-    z-index:20; opacity:0; pointer-events:none; transition:.15s}
-  .tour-mask.show{opacity:1; pointer-events:auto;}
-  .tour-spotlight{position:absolute; border:2px solid #7dd3fc; border-radius:10px; box-shadow:0 0 0 200vmax rgba(0,0,0,.45); transition:.15s; }
-  .tour-pop{position:absolute; max-width:280px; background:#0f172a; color:#e6edf7; border:1px solid #2b3247; border-radius:12px;
-    padding:.75rem; z-index:21; box-shadow:0 12px 30px rgba(0,0,0,.38)}
-  .tour-pop h4{margin:.1rem 0 .35rem 0; font-size:.95rem}
-  .tour-pop p{margin:0 0 .5rem 0; font-size:.9rem; color:#c9d5e6}
-  .tour-actions{display:flex; gap:.5rem; justify-content:flex-end}
-  .tour-btn{appearance:none;border:1px solid #2a3146;background:#111525;color:#dbe7f5;border-radius:.5rem;
-    padding:.35rem .55rem; cursor:pointer; font-size:.85rem}
-  .tour-btn.primary{border-color:#7dd3fc; background:#0b2336}
-  .prop{display:grid;grid-template-columns:1fr 110px;gap:.4rem;align-items:center}
-  .prop input,.prop select{background:#0e1324;border:1px solid #26304a;color:#e6edf7;border-radius:8px;padding:.35rem .5rem}
-  .muted{color:#93a0b3;font-size:.88rem}
-
-  /* Accesibilidad: foco visible y alto contraste en botones */
-  *:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
-  .toolbtn:focus-visible{box-shadow:0 0 0 3px rgba(110,231,255,.25)}
-  /* Light theme palette */
-  :root[data-theme='light']{
-    --bg:#f6f8fb; --panel:#ffffff; --ink:#0f172a; --muted:#3b4a5a; --grid:#e6eef5; --grid-strong:#cad6e2;
-  }
-
-</style>
-</head>
-<body>
+<?php $page_title='Planner Lite'; require __DIR__ . '/../includes/header.php'; ?>
+<?php /* PHP-ready */ ?>
 <div class="app">
   <header>
     <div class="title">Planificador Espacial <span class="badge">Lite • 2D</span></div>
@@ -94,7 +22,7 @@
       </div>
       <div class="toolgroup" id="grp-file"><span class="title">Proyecto</span>
         <button class="toolbtn" id="tool-theme">🎨 Tema</button>
-        <input type="color" id="theme-brand" title="Color de marca" value="#6ee7ff" style="width:34px;height:34px;padding:0;border-radius:8px;border:1px solid #2a3146;background:#111525;cursor:pointer" />
+        <input type="color" id="theme-brand" title="Color de marca" value="#6ee7ff" / class="inl-2-eb5684">
         <button class="toolbtn" id="tool-theme-export" title="Exportar tema">⤓ Tema</button>
         <button class="toolbtn" id="tool-theme-import" title="Importar tema">⤒ Tema</button>
         <button class="toolbtn" id="tool-text-minus" title="Texto -">A−</button>
@@ -147,13 +75,13 @@
       </div>
     </aside>
 
-    <section class="panel" style="display:grid;grid-template-rows:auto 1fr auto;">
+    <section class="panel inl-3-898cc1">
       <h3>Editor 2D</h3>
       <div class="canvas-wrap" id="canvasWrap">
         <canvas id="plan2d"></canvas>
         <div class="overlays">
           <div class="hud" id="hud"><div class="status"></div></div>
-          <div id="miniHud" class="mini-hud" style="display:none"></div>
+          <div id="miniHud" class="mini-hud inl-4-6b99de"></div>
         </div>
       </div>
       <div class="controls">
@@ -167,7 +95,7 @@
 
     <aside class="panel" id="inspectorPanel">
       <h3>Inspector</h3>
-      <div id="inspectorContent" style="padding:10px; display:grid; gap:.6rem; align-content:start;">
+      <div id="inspectorContent" class="inl-5-35d8f4">
         <div class="muted">Seleccioná un elemento para ver y editar sus propiedades.</div>
       </div>
     </aside>
@@ -175,9 +103,9 @@
 </div>
 
 <!-- Tour containers -->
-<div id="tourMask" class="tour-mask" style="display:none">
+<div id="tourMask" class="tour-mask inl-4-6b99de">
   <div id="tourSpot" class="tour-spotlight"></div>
-  <div id="tourPop" class="tour-pop" style="display:none"></div>
+  <div id="tourPop" class="tour-pop inl-4-6b99de"></div>
 </div>
 
 <script>
@@ -801,5 +729,4 @@ window.addEventListener('keydown', (e)=>{
 });
 
 </script>
-</body>
-</html>
+<?php require __DIR__ . '/../includes/footer.php'; ?>

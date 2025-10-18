@@ -50,7 +50,7 @@
         <a class="hover:text-brand-700 focus-ring" href="#faq">Preguntas</a>
         <!-- Enlaces a secciones adicionales -->
         <a class="hover:text-brand-700 focus-ring" href="/planner/planificador.php">Planificador</a>
-        <a class="hover:text-brand-700 focus-ring" href="/pages/\1">Pagos</a>
+        <a class="hover:text-brand-700 focus-ring" href="/pages/pagos.php">Pagos</a>
         <a class="hover:text-brand-700 focus-ring" href="#contacto">Contacto</a>
       </nav>
       <a href="#contacto" class="ml-4 inline-flex items-center rounded-xl bg-brand-700 px-4 py-2 text-white hover:bg-brand-600 focus-ring btn-anim nav-drop">Solicitar presupuesto</a>

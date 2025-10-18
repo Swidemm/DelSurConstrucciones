@@ -13,7 +13,7 @@
   <!-- Iframe embedding the planificador lite tool -->
   <section class="py-16">
     <div class="max-w-7xl mx-auto px-3">
-      <iframe src="/planner/planificador-lite.php" class="w-full rounded-xl border border-slate-200 shadow-sm inl-1-736ed8" allowfullscreen></iframe>
+      <iframe src="/planner/planificador-lite.php" class="planner-embed" loading="lazy" allowfullscreen></iframe>
     </div>
   </section>
 

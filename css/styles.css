@@ -125,7 +125,7 @@ body { margin: 0; }
 .form { display: grid; gap: 12px; max-width: 720px;}
 .form .grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); }
 label { display: grid; gap: 6px; font-weight: 600; }
-input, textarea { padding: 10px 12px; border: 1px solid #ddd; border-radius: 8px; font: inherit; }
+/* removed by v17e: input, textarea { padding: 10px 12px; border: 1px solid #ddd; border-radius: 8px; font: inherit; } */
 button { padding: 10px 16px; border: 0; border-radius: 10px; background: #111; color: #fff; cursor: pointer; }
 button:hover { opacity: .9; }
 
@@ -228,9 +228,115 @@ section.bg-slate-900 {
   color: #d8dee9 !important;
 }
 
+/* === v17f: Node utilities (from stylesNODE.css) === */
+/*
+ * Custom styles for Del Sur Construcciones.
+ * Moving CSS into this external stylesheet helps keep the HTML clean and
+ * makes maintenance easier. This file includes variables, utility classes
+ * and animations used throughout the site.
+ */
 
-/* === v17c: planner responsive + header separator fix === */
-.planner-embed { border:0; display:block; width:100%; height:min(90vh, 980px); }
-@media (min-width: 1280px){ .planner-embed{ height:900px; } }
-.header-separator, .site-header-sep, .nav-divider { display:none !important; height:0 !important; border:0 !important; }
-section + .site-header-sep { display:none !important; }
+/* Define a CSS custom property for focus ring color */
+:root {
+  --ring: #0f6a81;
+}
+
+/* Enable smooth scrolling when focusing elements via keyboard */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Utility class to display a visible focus ring on interactive elements */
+.focus-ring:focus-visible {
+  outline: 3px solid var(--ring);
+  outline-offset: 2px;
+}
+
+/* Animations for call-to-action buttons */
+.btn-anim {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.btn-anim:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.btn-anim:active {
+  transform: translateY(1px) scale(0.97);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* FAQ animation: animate answer expansion with a sliding effect */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+details[open] > .faq-answer {
+  max-height: 500px;
+}
+
+/* Blueprint overlay styling: subtle diagonal lines reminiscent of architectural blueprints */
+.arch-overlay {
+  background-image: repeating-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.2) 0,
+      rgba(255, 255, 255, 0.2) 2px,
+      transparent 2px,
+      transparent 40px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      rgba(255, 255, 255, 0.2) 0,
+      rgba(255, 255, 255, 0.2) 2px,
+      transparent 2px,
+      transparent 40px
+    );
+  opacity: 0;
+  animation: overlayFade 1.5s 0.5s forwards;
+  z-index: -9;
+  pointer-events: none;
+}
+@keyframes overlayFade {
+  to {
+    opacity: 0.05;
+  }
+}
+
+/* Logo slide-in from the left */
+.logo-slide {
+  animation: slideInLeft 0.7s ease-out both;
+}
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Header buttons drop down from the top */
+.nav-drop {
+  animation: dropDown 0.7s ease-out both;
+}
+@keyframes dropDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === v17e: Global readability + planner sizing === */
+.site-main { padding-top: 0 !important; }
+h1, h2, h3, h4, h5, h6, .section-title, .card h3 { color: #000 !important; }
+p, li, span, a, strong, em { color: #111 !important; }
+.planner-embed { display:block; width:100%; border:0!important; outline:0!important;
+  height: clamp(760px, calc(100svh - 140px), 1200px); min-height:760px; }
+@media (max-width: 640px){ .planner-embed{ height: calc(100dvh - 120px);} }
+.planner-embed, .planner-embed * { box-shadow:none!important; }
